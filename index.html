@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+	<head>
+		<title>Moja strona</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		img {
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			height:300px;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Początek</a></li>
+							<li><a href="#one">Najnowsze projekty</a></li>
+							<li><a href="#two">Wszystkie zadania</a></li>
+							<li><a href="#three">Galeria</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Wojciech Żurek</h1>
+							<p>Strona, na którą będę wrzucał wszystkie swoje zadania z HTML, CSS, JS i Php<br />
+							i może coś jeszcze...</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">DALEJ</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Zestrzeliwanie samolotów</h2>
+									<p>To była animacja ruchomych piłeczek, którą należało przerobić na latające samoloty, a także dodać wiele modyfikacji, np. ustawić tak, żeby samolot zawsze leciał do przodu (albo do tyłu, jeżeli zdjęcie jest odwrócone).</p>
+									<ul class="actions">
+										<li><a href="index.html" class="button">zagraj</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Gra binarna</h2>
+									<p>Polega na ułożeniu wszystkich kostek w kolejności numerycznej. To kolejne zadanie, które należało zmodyfikować.</p>
+									<ul class="actions">
+										<li><a href="index.html" class="button">zagraj</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Sekwencja ruchów</h2>
+									<p>Wciskając odpowiednie przyciski należy wygenerować liczbę, którą wylosował komputer. Gra posiada różne poziomy trudności.</p>
+									<ul class="actions">
+										<li><a href="index.html" class="button">zagraj</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Zadania domowe z zajęć</h2>
+							<p>Zadania domowe posegregowane według list. Każda lista to jeden tydzień.</p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>Treści list</h3>
+									<p>Po kliknięciu w to okienko będziesz mógł zabaczyć treści zadań z wszystkich list.</p>
+								</section>
+								<section>
+									<span class="icon major fa-lock"></span>
+									<h3>lista 1</h3>
+									<p>Lista obejmująca zagadnienia z HTML. Pierwsza i najprostsza lista zadań.</p>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>lista 2</h3>
+									<p>Lista wprowadzająca do CSS3. Zawiera trudniejsze zadania z HTML i kilka funkcji JavaScript</p>
+								</section>
+								<section>
+									<span class="icon major fa-desktop"></span>
+									<h3>lista 3</h3>
+									<p>Według prowadzącego, to jedna z trudniejszych list z JavaScript. Lista obejmuje zadania średniego poziomu trudności.</p>
+								</section>
+								<section>
+									<span class="icon major fa-chain"></span>
+									<h3>lista 4</h3>
+									<p>Zawiera zdania, które polegają na modyfikacji istniejących plików z rozszerzeniem html. Wymaga znajomości JavaScript.</p>
+								</section>
+								<section>
+									<span class="icon major fa-diamond"></span>
+									<h3>lista 5</h3>
+									<p>wkrótce.</p>
+								</section>
+							</div>
+							<ul class="actions">
+								<li><a href="index.html" class="button">Kalkulator</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>galeria</h2>
+							<p>Tutaj zamieściłem galerię, która była jako zadanie domowe</p>
+							<div class="split style1">
+								<div>
+		<img id="fota" src="zdjecia/a1.jpg"><br>
+	
+		<button onclick="zmiana(-1)">poprzednie</button>
+		<button onclick="zmiana(1)">nastepne</button>
+	</div>
+	
+	<script>
+			var n=0;
+			images = new Array(
+				"zdjecia/a1.jpg",
+				"zdjecia/a2.jpg",
+				"zdjecia/a3.jpg",
+				"zdjecia/a4.jpg",
+				"zdjecia/a5.jpg",
+				"zdjecia/a6.jpg",
+				"zdjecia/a7.jpg",
+				"zdjecia/a8.jpeg",
+				"zdjecia/a9.jpg",
+				"zdjecia/a10.jpg",
+			)
+
+			function zmiana(f){
+				n += f;
+				if(n<0)n=9;
+				if(n>9)n=0;
+				document.getElementById("fota").src=images[n];
+			}
+	</script>
+								
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Wojciech Żurek. All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
