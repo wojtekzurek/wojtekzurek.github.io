@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+    <meta charset="utf-8">
+	<title>Samoloty</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<style>
+    #ramka {height:600px;width:1500px; border:1px solid grey;margin:auto;position:relative; background:LightBlue;}
+    #mieszaj {pointer:hand}
+    b {display:block;height:10px;width:10px;border-radius:5px;background:red;position:absolute}
+    h1,div {text-align:center;margin:10px}
+    img {
+		height:170px;
+		position:absolute;
+		display:block;
+		width:170px;
+		}
+</style>
+</head>
+<body>
+
+	<!-- Header -->
+			<header id="header">
+				<a href="samoloty.html" class="title">RESTART</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Powrót</a></li>
+						<li><a href="samoloty.html" class="active">Następne</a></li>
+						<li><a href="samoloty.html">Poprzednie</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+<h1>SAMOLOTY</h1>
+<div id='ramka'>
+    <img src="samoloty/image1.png" onclick='wybuch(0)'>
+    <img src="samoloty/image2.png" onclick='wybuch(1)'>
+    <img src="samoloty/image3.png" onclick='wybuch(2)'>
+    <img src="samoloty/image4.png" onclick='wybuch(3)'>
+    <img src="samoloty/image5.png" onclick='wybuch(4)'>
+ 
+</div>
+
+<div>
+    <button onclick="run=false"> Stop </button>
+    <button onclick="run=true;start()"> Start </button>
+</div>
+
+<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major"style='margin-Left:auto, margin_right:auto'>Instrukcja</h1>
+							
+							<p>Zestrzel wszystkie samoloty klikając na nie.</p>
+							<p>Możesz zwiększyć poziom trudności klikając START wiele razy. Gra jest zrobiona pod komputer i nie zaleca się grania na telefonach i tabletach.</p>
+						</div>
+					</section>
+
+<script>
+        var b=document.querySelectorAll('img');
+        var run=false;
+        var i;
+        for(i=0;i<b.length;i++)
+					
+		
+        {
+            b[i].xx=Math.random()*1250;
+            b[i].yy=Math.random()*450;
+
+            b[i].vx=Math.random()*20-10;
+            b[i].vy=Math.random()*20-10;
+            
+            b[i].style.left=b[i].xx+"px";
+            b[i].style.top =b[i].yy+"px";
+        }
+
+    function start()
+    {
+        var i;
+        for(i=0;i<b.length;i++)
+        {
+            b[i].xx+=b[i].vx;
+            b[i].yy+=b[i].vy;
+            
+            if(b[i].xx>1250 || b[i].xx<0){
+				b[i].vx*=-1;
+				b[i].style.transform="rotate("+Math.atan2(b[i].vy,b[i].vx)+"rad)";
+			}
+				
+            if(b[i].yy>450 || b[i].yy<0){
+				b[i].vy*=-1;
+				b[i].style.transform="rotate("+Math.atan2(b[i].vy,b[i].vx)+"rad)";
+			}
+            
+            b[i].style.left=b[i].xx+"px";
+            b[i].style.top =b[i].yy+"px";
+        }
+        
+        if(run)
+            setTimeout(start,20);
+        
+    }
+	function wybuch(x){
+		b[x].src='samoloty/boom.png';
+		setTimeout(hide, 1000, x);
+	}
+	function hide(s){
+		b[s].style.display='none';
+	}
+</script>
+</body>
+
+</html>
