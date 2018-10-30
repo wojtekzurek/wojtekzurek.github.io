@@ -142,28 +142,7 @@
 		<button onclick="zmiana(1)">nastepne</button>
 	</div>
 	
-	<script>
-			var n=0;
-			images = new Array(
-				"zdjecia/a1.jpg",
-				"zdjecia/a2.jpg",
-				"zdjecia/a3.jpg",
-				"zdjecia/a4.jpg",
-				"zdjecia/a5.jpg",
-				"zdjecia/a6.jpg",
-				"zdjecia/a7.jpg",
-				"zdjecia/a8.jpeg",
-				"zdjecia/a9.jpg",
-				"zdjecia/a10.jpg",
-			)
 
-			function zmiana(f){
-				n += f;
-				if(n<0)n=9;
-				if(n>9)n=0;
-				document.getElementById("fota").src=images[n];
-			}
-	</script>
 								
 							</div>
 						</div>
@@ -188,6 +167,28 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+				<script>
+			var n=0;
+			images = new Array(
+				"zdjecia/a1.jpg",
+				"zdjecia/a2.jpg",
+				"zdjecia/a3.jpg",
+				"zdjecia/a4.jpg",
+				"zdjecia/a5.jpg",
+				"zdjecia/a6.jpg",
+				"zdjecia/a7.jpg",
+				"zdjecia/a8.jpeg",
+				"zdjecia/a9.jpg",
+				"zdjecia/a10.jpg",
+			)
+
+			function zmiana(f){
+				n += f;
+				if(n<0)n=9;
+				if(n>9)n=0;
+				document.getElementById("fota").src=images[n];
+			}
+	</script>
 
 	</body>
 </html>
