@@ -3860,7 +3860,7 @@ input, select, textarea {
 		background-image: url("images/image1.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 	}
 
 		#intro p {
