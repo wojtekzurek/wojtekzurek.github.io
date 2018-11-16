@@ -3276,7 +3276,7 @@ input, select, textarea {
 				}
 
 					body.is-ie .wrapper.fullscreen {
-						height: calc(100vh - 2.5em);
+						height: calc(100vh - 0.5em);
 					}
 
 			}
