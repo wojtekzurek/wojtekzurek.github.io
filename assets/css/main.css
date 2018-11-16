@@ -3272,7 +3272,7 @@ input, select, textarea {
 			@media screen and (max-width: 1080px) {
 
 				.wrapper.fullscreen {
-					min-height: calc(100vh + 5.0em);
+		/*			min-height: calc(100vh + 5.0em); */
 				}
 
 					body.is-ie .wrapper.fullscreen {
@@ -3285,7 +3285,7 @@ input, select, textarea {
 
 				.wrapper.fullscreen {
 					padding: 2em 0;
-					min-height: 0;
+			/*		min-height: 0; */
 				}
 
 					body.is-ie .wrapper.fullscreen {
