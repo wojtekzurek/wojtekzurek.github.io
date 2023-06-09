@@ -35,53 +35,53 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">strona główna</a></li>
+							<li><a href="index.html">main page</a></li>
 							<li><a href="cpp-index.html">C++</a></li>
-							<li><a href="elektronika-index.html">elektronika</a></li>
-							<li><a href="inne-index.html">inne</a></li>
-							<li><a href="kontakt.html">kontakt</a></li>
+							<li><a href="elektronika-index.html">electronics</a></li>
+							<li><a href="WojciechZurekCV2023.pdf">curriculum vitae</a></li>
+							<li><a href="kontakt.html">contact</a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Zasilacz laboratoryjny</h1>
-							<h2>Podwójny liniowy zasilacz laboratoryjny</h2>
+							<h1>Laboratory Power Supply</h1>
+							<h2>Double linear laboratory power supply</h2>
 							<span class="image main"><img src="https://lh3.googleusercontent.com/pw/ACtC-3cDBIN4E_KA-P37Vtbd1US-htkcZMDnGR3T0rLWyiWiBK5alx-UTJzoPLMVaCepOKWmDZtEiARG2MaT5bkfvQPwYyWGpLXS_jYNKQLedP7QoMq7C85M_iLoz8CLtSWkQMLu-UCiPAe7S-XSa-XhMmd8=w1258-h943-no?authuser=0" alt="" /></span>
 
 							
 							<p>Postanowiłem wykonać zasilacz laboratoryjny wzorując się na projekcie z strony electronic-labs <a href="https://www.electronics-lab.com/project/0-30-vdc-stabilized-power-supply-with-current-control-0-002-3-a/">(link)</a>. Użyłem transformatora 2x30V 2x200VA. Chciałem przerobić układ na 5A, więc wprowadziłem kilka modyfikacji.
-								Projekt podzieliłem na kilka etapów. Całość zajęła mi około 1,5 roku.
+								Projekt podzieliłem na kilka etapów.
 							</p>
-							<p><b><a href="https://photos.app.goo.gl/HhGPa2axnGwVi3oS7">ETAP 1 - zdjęcia</a></b></p>
+							<p><b><a href="https://photos.app.goo.gl/HhGPa2axnGwVi3oS7">PART 1 - photos</a></b></p>
 							<p>Projekt (Schemat i płytkę PCB) wykonałem w programie EasyEDA. Następnie płytkę PCB narysowałem za pomocą markera na surowcu i wytrawiłem nadsiarczanem VI sodu II. Po zlutowaniu okazało się, że
-							układ nie działał. Po sprawdzeniu elementów za pomocą woltomierza wyszło na jaw, że wzmacniacze operacyjne TL081 uległy uszkodzeniu na skutek zbyt dużego napięcia. Zmodfikowałem ponownie układ wprowadzając zmiany:
-							[EDIT]
+							układ nie działał. Po sprawdzeniu elementów za pomocą woltomierza wyszło na jaw, że wzmacniacze operacyjne TL081 uległy uszkodzeniu na skutek zbyt wysokiego napięcia dostarczonego na ich wejście.
+							Zmodfikowałem ponownie układ zmieniając
+							wzmacniacze operacyjne na inne, pracujące przy większym napięciu.
 							
-							i ponownie wytrawiłem i zlutowałęm płytkę PCB.
+							Następnie ponownie wytrawiłem i zlutowałęm płytkę PCB.
 							</p>
-							<p><b><a href="https://photos.app.goo.gl/FWkLbQbLnEzu8iwB6">ETAP 2 - zdjęcia</a></b></p>
+							<p><b><a href="https://photos.app.goo.gl/FWkLbQbLnEzu8iwB6">PART 2 - photos</a></b></p>
 							<p>
 							Układ nadal nie działał prawidłowo. Po zbadaniu go oscyloskopem, doszedłem do wniosku, że mój transformator nie jest w stanie zasilić wzmacniaczy operacyjnych wysokiego napięcia (OPA445AP) i
 							jednocześnie wytworzyć odpowiednio dużą moc na wyjście zasilacza.
 							</p>
-							<p><b><a href="https://photos.app.goo.gl/JGSoQFG5KczbZ6tz8">ETAP 3 - zdjęcia</a></b></p>
+							<p><b><a href="https://photos.app.goo.gl/JGSoQFG5KczbZ6tz8">PART 3 - photos</a></b></p>
 							<p>
 							Ponownie przerobiłem układ. Tym razem użyłem wzmacniaczy TLE2141 i wstawiłęm większy kondensator (10.000uF 50V) <br>
-							Ostateczny projekt wersji płytki wysłałem do firmy, która zajmuje się tworzeniem takich rzeczy. Po kilku tygoniach otrzymałem płytki. Po zlutowaniu, układ działał prawidłowo.
+							Ostateczny projekt wersji płytki wysłałem do firmy JLCPCB, która zajmuje się produkcją obwodów drukowanych. Po otrzymaniu przesyłki i zlutowaniu układu, działał on prawidłowo.
 							</p>
 							<p>
-							Wykonałem osobne zasilanie dla wentylatora i woltomierzy/amperomierzy. Modułów woltomierzy i amperomierzy nie mogłem podłączyć tak, jak zaplanowałem to w pierwotnym projekcie. Wynikało to z wspólnej masy
+							Wykonałem osobne zasilanie dla wentylatora i wskaźników cyfrowych umieszczonych na panelu głównym. Modułów woltomierzy i amperomierzy nie mogłem podłączyć tak, jak zaplanowałem to w pierwotnym projekcie. Wynikało to z wspólnej masy
 							woltomierza i amperomierza. To oznacza, że rezystor R25 stał się bezużyteczny.
 							</p>
-							<p><b><a href="https://photos.app.goo.gl/5hLzvPEiq5DmnZgq6">KONIEC - zdjęcia</a></b></p>
+							<p><b><a href="https://photos.app.goo.gl/5hLzvPEiq5DmnZgq6">FINISH - photos</a></b></p>
 							<img src="https://lh3.googleusercontent.com/NR10u0vePJdMMjSquBVmQ_5IL7J3A8c1G0KF-X9MjDbOfjkZETGQ078-itsk0qu2ddf5AY10l5kSY0nruO9kyRT9u5PgqTsTMEyvWMyyvSleAPjtaisMk6BbT1kDf4DUBoMSo6cFpmmBstHmATLLobM907CMclAm854P8sTlJMnidV0XvBYyOg3fPZbsDRU1q1Rwia4ILhxAdts9bOeOjnXOIZtjxMoEIkqjgYDgnZzH-m7s3Gxuhwjowz4MBewqm_tVIT1wY2bF1Iy7b6hX5VD7lDkMnDzlIZZ_II9rVx8Nv1XtE-aUUEHDaHpvlj7nmLWVxtlVwVo9kFq5sgteFXTZ-m3FuSI63VnPHmUd_LWko_XqcYAhTrzebeRhtJqIbkA0gqOm-W_Nx45KgLwZnlPdBfoiooOtndoR9eBxmHCOf8JOCW4djajCK5gA65VoJij6aVly-nx8MNxaoCNtON4-r3GB1fya-K5l56AGeoFqBILtUx8W3j-Xk4_3ONq0iMbPpuDSUd4kXPpu6FLxTpUTlyS__i2O1C8U4pNfZHWvEBwDp8vEhThE3BExeXkQ7jYHRHfRvYHjuc5_7GxVDsaB5jGGNV-TGnnx8IPRnb3crXGJu1evcKKg5RYtobpx7LzH8uNbNTFa_7tcxW0ZuWqhjgBunsRSJDWPieAKyDGcLS8s4FKEmHLX3Ub1Rw=w1258-h943-no?authuser=0" width="100%" align="center"/>
 							<img src="https://lh3.googleusercontent.com/FFefaC4idmlgj9ZvNOROJaIRKgYc1pvVtII3WyQ9HF-kiLvkuzOr-AEy5Ht4oHdn18aqt9wO5iLQVNJCcZbfeYtts29Tx7KdM0Ecxuz5NYTc5bsPAKY_jYG2OKHGo44oCwAbgB2q9UaE7YMu00lC-1DZlkc58Y-7oMMwxhfl_ut8x9miRSRotajP7yPM4cRR-zVGxllkqJgTGt4gHjo0QuX0BgRK7Pjs9SOn5MviVSRoeyzeoZLjfx7pbdTQrWsNqi7mwBNqp0WJjA8wt80L5Sh3gOg2eTYiiuFFy27v5qRELHtvPrHzmpjFMFFe-NzFNuQ4DxcoryMSPEDo8aG_DUnUHmbodrF9OI3mRQwCw3ZZpG_fVPCowKEXqyNxYhPwocUgNDAVwlFHW3X1fecsxrk_wd7CRRfQzLAPYdqiGu3HbgrfV7pwMCWFPIVd_2FqPV3u_jQ_jZvNd4h9y2AW6r3w_G06Zqi08j9xagqfGYN2rTDvSZLkqEnzXTfLQT73S5PIVJVXBcSSWOtabMak5bxVB_uxnHDquko1r40xD3N2rER1YruYIyQN6GMkeEfkpR2PDz1JdOngwy-fCAAs1CdD-W3oEdBbN6Kqvd5CzXos4pbh5CluguCTe0BAsBZHDNkJQ9N4I6XH8EBvWUIRwl3ks-xjSdXyrP38OgHuLocGAXZt589i7_vFHzxLKQ=w1077-h797-no?authuser=0" width="100%" align="center"/>
 							<img src="https://lh3.googleusercontent.com/ySoljbtISxaB4WNI6js54bSia3w90ZNag4evv9RvUtVEkIIPIo5GPd2Yxhp-0Aor7VeNrnhi5jFh5qZ1EsRybXU-Af-_RFt2Kpd3ECgNKL47BK9TnMyiP63ET1czbuNMrp8qhzc18qdNNyVns-RF3s3jFiVSBgPQrNVpoBSnuwZgAqqZlS4pxGnk05EuMvWaVwhi7-6XpOUdlOThyjoIMCaZCk0n6H1ZMy_qoqqNiHDyBNDcmknt5QQthicVOI-ytmgjsUtc-dAfmFx-MwlMQyEHiEEFGTxfDxHfsUHGbJ2RHgzhgBo9vBQ5NvWKvtqeDqeQsUqhuw-o_2fg7W-FqjmgNdWzd0ejBDUXGVkp3LVyvK7qS5lTi-QlyDE1gH8F6WwiwxE8hhbke5mhN0M_v0n6djMbVG1p7hPO21r6ma7DdD3OHZyQMnSazlSvC5DhK1Mx763DG5c1gIT3Vfd2kHDaDRth5p67bWQfErzb7cr9qUB_6pObe4VMt5D4ZDWWOKMSYqi7JD3-7j830EycznhkzkngNstN1CKi0QPD82LlUmFWgJpNKHBPXtoxCeOFKugDzhf3Y05pyCt3hs7iTbpdMCzxxbcYmHxIBJ_UqUuCoEUMc203wdchyoEqtnMSg4jA3sxJveK42fpBTq9x-SXc6Eq6skj2_SIV_19I4qk0jdJp0mfePyrVqjoX0w=w1258-h943-no?authuser=0" width="100%" align="center"/>
 							<p>
-							<p><b><a href="https://easyeda.com/3MLG5U/zasilacz2">PROJEKT - EasyEDA</a></b></p>
-							[schemat zasilanie V/A]
+							<p><b><a href="https://easyeda.com/3MLG5U/zasilacz2">PROJECT - EasyEDA</a></b></p>
 							</p>
 						</div>
 					</div>
