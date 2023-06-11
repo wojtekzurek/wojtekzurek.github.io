@@ -129,7 +129,58 @@
 							•	kontroluje zmianę wartości wybranych rezystorów;	<br>
 							•	komunikuje się z panelem sterującym, przez który użytkownik konfiguruje urządzenie.  <br>
 							</p>
-							DOKONCZYC!
+							<p>
+							Układy przełączające obwodów zrealizowano na pomocą układu MAX395EAG+. Jest to 8-kanałowy układ z analogowymi z przełącznikami jednobiegunowymi, 
+							jednopołożeniowymi. Posiada osiem 
+							niezależnie sterowanych torów. Przełączniki są zaprojektowane do przewodzenia prądu w obu kierunkach, dzięki czemu mogą być używane do pracy z 
+							sygnałami przemiennymi. Konfigurację wyprowadzeń układu MAX395EAG+ pokazano na Rysunku poniżej.
+							</P>
+							<center>
+							<img src="https://lh3.googleusercontent.com/0bMadxF6jLc5--rFnttgnXEoaKyUCzcEMKj1EGywkhGqwRxXrpFj0bygd67RC0fmi4lBVa_-mnQ2VU9O5fQ-bS3levohFSISxM-FWxiN3L3TSSGCkyUveKh375b3VrHolBK3p1sEkvuc7iuGLQZc4KefP7VHekcPvRIuL4NTfrrTyyzVTW3d9hB-Mo14FctUj_H4JMPqBXh_Ay1XQfeD77DnykWPLDFhkzQXVj5M2MLaTgPT1Z-PForzjNYrm10JJJE4G7TCdX01EHsTbjsZse5bK24RpWpKLbKqD7nEB-oNVqWLQndlVzW6Zc6sgf2wmeCl3yVN_vSsLXb4flIC73ogiWnZY2P7MEPJgt6fQVzv-uStsrLBe4PryEHuf3sOdBFbXe0mqbdqla1ycBVOLnemxRRq4XbbaQRgWiS4eBJQusJhouKM9H37cvgWgpSEo61RALIfOsmGds-xT45rOgfPIWHBYsKSPfATwNXZe_J7RlHrENYTJ4R0-LSzldoaZTDMV2Rag67NqrTYpdD3p73JFynVCuFaObLz6zlZ5l5qK2WRCkIYcns5YOL-DuAW-xhbc1IGRrkiwOnk3g0cA0JIjOe5rtLwG6tmU1d2KVLJuVREvVLSdOKIs1sNJeJ7OjgffVX2DnaUS2g0UPY-RaDLsnxVoetqFwHzKqCm3IZBA3j3S2pBajHK_SJW5kBfREoBPA-myeCLsuydKHY78RchBpG5sIpKFZ77jhNJuwxY_XlO0LrWFIl-VrxdG4a1zKyGj2yW6XUkYxhVsHp3zCB-GLRUim_vMYiQ0Ri8Y9dpocWX-lPMVHfC7SRLzfbmZI7Y3VnTcoYju_Sqi-197eG94E8lc-viIT1SnYtF_p3FXVsp9Tdpcc9r0LKRsrYdsccVkzcmnL6zo0NP1JjttosWFLL0MHuH39v9Oh793bu9qaqxFt5PhyVASHoXa21IE_L1DnLtbnij8m2dtA=w344-h335-s-no?authuser=0" width="20%" align="center"/>
+							</center>
+							<p>
+							Pierwotnie zaplanowano wykorzystanie układu przełączającego ADG715BRUZ-REEL7, którego rezystancja toru była rzędu mili Ohmów. Finalnie jednak czas 
+							oczekiwania na realizację zamówienia układu u producenta był zbyt długi i cały układ wraz płytką drukowaną musiał być zaprojektowany i wykonany 
+							dla dostępnego komponentu.
+							</p>
+							<p>
+							Zmianę wartości rezystorów wykonano w oparciu o układy firmy Microchip z serii MCP4251. Są to cyfrowe 8-bitowe rezystory regulowane w 257 krokach 
+							(256 możliwości przełączenia między 257 rezystorami wewnętrznymi). Działają one w oparciu o drabinkę rezystorową, której poszczególne sekcje są 
+							dołączane poprzez wewnętrzne włączniki.
+							</p>
+							<center>
+							<img src="https://lh3.googleusercontent.com/scwVzGNMGHHWSv0NTVOdpIIe20rfBrjpLS7b9su5Z5xYbG-fk3pxAE47ySg0h2sq21kzBrH288VPySDfqR1gklaLDt5h1nroGm7aO5QzaGpaITcTKH0R-cptXT1puVm5SsxDCy3a5mHlzwBssxhUDCg5nrCe55WKz4c7a6ynMmXrUs51oeHXtmXyLinuuuuRdFhVVnTR7KLZr16eQOxHlb7w1bpyMJPEGHZrhsnf88knbpglUx3_w5SU33BPPlLQz1AeDKut8U6bNFCNVEIt76SyDE-xrKmaeVw8yTe-LPiN4pqfaBl4KVsqSGdfoKuQDEIKHWUx8Mx1mACcQo8RPkXp1wGdeiv55n1lTaVpucmAZZlIqfuvFzfZycs5GZI8xJSoyFuOwwZQ-VVI145PYpQLfHAq9blrZJtb45k0M9Ku5CddPDCdh0dqsFzMo-_dB1U-sXkjm-PYDEOtuESHmzbGGX2iKFO3Fzv52_s3FZYoz4t8Zh9ysbfpDA5rB_6qCcr0_fMtR7vt6FJAjgnMEAbxGyNlQLEBBuoyQ5SLI1j9s3W-j-oQg3XhDR6yUPhBMy4uQ7uBx7cSaQdWafdvRgpyS9eaSdC4YekNg6rHa5EJ29T3G_S4Y9vTJuggXH0Ac--QsQacXYpdrIuhT-A5koJzlSdYglgfTMNDwlHO01y--3myy1ZescLcxY6r2tDPxoiiOPOTyxJnEsfv7yd-Tx2G69-wTZiQFf8d_grhqMYw_Z59jzWfXvhVEK43ni4dbvDVO1z-dBtYtaY4Y7OUhtBrdU1PZPoJhob6zclzI_1YyLGA3RxSpNXrOPVbdfkkg3bWUtlNQ25L5X1dvT73lsGjs4JHBonSaajQyAK6_5qTE3XJiZNHrxZYVcxye5uflhTvwMFe6NJ-X6k8XcABckfeTkjXU2IDPeQQ9t2oyw21LSGOKBerHOfUrgs-wBr-L23YhtUEOzrQl99tdA=w837-h507-s-no?authuser=0" width="50%" align="center"/>
+							</center>
+							<p>
+							Do komunikacji wykorzystują interfejs SPI, dzięki któremu w prosty sposób następuje zmiana wartości rezystancji. Połączenie pinów rezystorów 
+							z mikrokontrolerem jest takie samo jak w przypadku przełączników cyfrowych. Wszystkie układy wykorzystane do realizacji pracy inżynierskiej 
+							należą to jednej serii, ale różnią się rezystancją nominalną: 5 kΩ, 10 kΩ, 50 kΩ, 100 kΩ. Dostępne układy zawierają jeden lub dwa 
+							potencjometry w obudowie, co znacznie ułatwia rozmieszczenie ich na płytce PCB.
+							</p>
+							<p>
+							Sercem układu sterowania i kontroli jest mikrokontroler znajdujący się na platformie Arduino nano. Pełni on nadrzędną rolę w układzie, gdyż 
+							komunikuje się z poszczególnymi podzespołami i przekazuje im informacje wysyłane z panelu sterowania. Informacje od użytkownika zostają 
+							przesłane przy pomocy transferu SPI do cyfrowych przełączników lub rezystorów. Dane trafiają do każdego elementu połączonego z mikrokontrolerem, 
+							jednak konkretny odbiorca zostaje wybrany poprzez zmianę stanu połączenia z wysokiego na niski. Dane tego odbiorcy także są zawarte w informacji 
+							przysyłanej do mikrokontrolera i dzięki temu wiadomo, w którym połączeniu stan powinien zostać zmieniony. Pozostałe elementy, które są utrzymane 
+							w stanie wysokim, ignorują dostarczane do nich bity danych. Po skończeniu transferu danych, wszystkie połączenia ustawiane są w stanie wysokim.
+							</p>
+							<p>
+							Mikrokontroler jest wyposażony w procesor ATmega 328 zasilany napięciem stałym 5V. Posiada on 32 kB pamięci flash, która służy do 
+							przechowywania programu do sterowania zasobami sztucznego obciążenia do testowania spektrometru i potencjostatu. Mikrokontroler z panelem 
+							sterowania jest połączony za pomocą pinów komunikacji szeregowej Rx i Tx. Umożliwia mu to wysyłanie oraz odbieranie informacji wysyłanych 
+							przez sterownik panelu HMI. Mikrokontroler jest także połączony bezpośrednio z każdym przełącznikiem i rezystorem cyfrowym. Wykorzystuje do 
+							tego 10 pinów, które służą zarówno do komunikacji SPI z poszczególnymi układami lub są bezpośrednio sterowane z poziomu mikrokontrolera.
+							</p>
+							<p>
+							Panel sterujący HMI firmy Nextion NX3224T028 posiada matryce TFT, a do komunikacji wykorzystuje tylko jeden port szeregowy. Został stworzony z 
+							myślą o uniknięciu kłopotów z okablowaniem. Posiada piny umożliwiające podłączenie zasilania (+5V i GND) oraz takie, które pozwalają na 
+							komunikacje przez port szeregowy realizowany w technologii TTL (Rx i Tx). Dzięki takiemu rozwiązaniu, mikrokontroler (lub inne podłączone 
+							urządzenie) może łatwo odbierać i wysyłać dane do ekranu za pomocą prostego kodu ASCII. Programowanie wyświetlacza odbywa się przy użyciu 
+							aplikacji komputerowej stworzonej przez producenta. Każdy slajd i każdy element interaktywny posiadają osobny plik z kodem. Aplikacja posiada 
+							tryb „przeciągnij i upuść”, która znacznie ułatwia programowanie i tworzenie wizualizacji.
+							</p>
+
 
 							<p><b>PROGRAM STERUJĄCY</b></p>
 							<p>
@@ -184,15 +235,36 @@
 							</p>
 							
 							<p><b>WYKONANIE PRZYRZĄDU</b></p>
+							<p>
+							Do fizycznej realizacji układu został wykorzystany dwuwarstwowy obwód drukowany o wymiarach 10/15 cm.
+							Układ został zaprojektowany w programie EasyEDA Designer. Pakiet EasyEDA, to internetowy zestaw narzędzi, 
+							który umożliwia projektowanie układów oraz płytek wraz z ich wizualizacją.
+							</p>
 							<center>
 							<img src="https://lh3.googleusercontent.com/2iUPLU__Dg140s0NW9kP41J6dS7Sjgq1Rs6SVHNmfhZVHH2mB5xpfxImLlk6sAQSGMN-uVCmngQJ75P5J_b6y3n9sxSZHWL6AnJv-LpVWijWgOCVWvEByjzX6VfWw_Mu9yp-jybK9QpJhgqHT6HXMQPoprxAKUePid7xv1_BNS67V0k2e7Uc7PpdvYRtHjErcuGiROrhJD5eQ322Mp6vFc1cmUlh2Vl4TPMmBxM88mcWtYGBf2wZNj1JhdoYI9VysUx6DOmGDVrw8dzCt2SAf9pNBIN0uxFrjzKmKgqZkDdEthKc0XP_68579eQuIPsN8VhHXCZHwVk_KCMhiT8FNqe3yTme5PxffIv4gygF_WkxwToU6WFnoTh2ACAbfh3KZ3H4Q-1JeiTDxqIjy3gh67YixtCDC8QPXwoWzixw8LkIdSiwEIM5-rZlFi11tqhs8VAhbW7oPwQks3Y2LRG6YBG2E26vZC5IrGU5-8WuhivaeXkqUcNBt2KyDyUwjZgJmxK-vCFIIsvflxhUoEfydYRXQmswOZO561qABARzsqHcwOvnjQPHfZkME3c0IbYQtmM9UKuZxJ33Nki_ShW--s4Zy3bPZtCkZDYY4x3kzM8yL2-3vDDBJluvrcmxYwq76oS1KGxbH8FIp__i-MntWfFiGwuQ0CBqXzIwX8idq_afaq2Y0Y-2UqqAvrlVQjZ3QQUPwfRV38HdPbohfNUU-79jexAW6EashRCSdrtPQesZjfyEkn17FE-0UZhTBRxEmmeXUT0ogWCdG1Xmu_S9nWRCVRhkZGS1bNuBGml1N-lS1nxVRrYBTLF0unprYSiwmws3MfDFrYNrbz-j3Gbpmr9RmEtzQ4dwGOkp6tsZh1UMaHuIWdiD_eR1agrG9wqM0xRqrNqomQhVG5_hMvNeYU3rpf8HAtlNSUU8cOJvj14-AnMan2MK7CESuEXAZjkvbQUnC_t_iPUu0EROeQ=w811-h567-s-no?authuser=0" width="50%" align="center"/>
 							</center>
+							<p>
+							Na płytce PCB umieszczono zarówno obwody połączeniowe, jaki układ zasilania, przy separacji części wysokiego i niskiego napięcia. Dwa rzędy 
+							złączy typu goldpin pozwalają na podłączenie modułu Arduino Nano z mikrokontrolerem AVR ATmega 328 sterującym cyfrowymi przełącznikami oraz 
+							rezystorami. Wszystkie obwody, z wyjątkiem obwodu pojemnościowego i diod, zostały wykonane w technologii SMD
+							</p>
 							<center>
 							<img src="https://lh3.googleusercontent.com/DUprAV7F_yrskdsBOIs0d75xL3_zTxozIlCQ1RhR9V99H2Rtn4VlcsI4PbC24-EYZOwAtBV24RqSr15RJhOeg3Mc3iaHSZf8M6ZomtwQUtNhaNI16P4UKjabysT1H4edrRhx496v7IZhYBHr7ckGT68MR-oVoLGVyFUDtdjaknD_eN64xz9mVgl5BjzdyHhIzIguqVwgD9dnbN4dwcI5osh6R3c9tI-yU5xK5hiQIS9UXLP7V9mDesqbmP2aDc8dOE11Tklo7paGM4khp0gKfT45-igaegsOIJuf3eIrO345yuLYTSvT96BKJAwlJlx91A5JCjvOXz355Npy7ClbCriMRUh6It-MTrGTKVgXijfQw0ZYS6yJDPwb_QbwmJxcKXxig5tqtWCZyFgWjL1Sd-ysulR9lmi7Im1aXcARMvZOz439V_7ofwC7JbIR5zhu-Raqq23tt6TAYzOlH529eVfsKPxCaTuwfucZ30k-flkGsqyvhq6nSQIkBudXT3EU-2YnXAR-EfmyPKdYls4-d_-vMNpBgbBdfuISTQZ5GOoNZWgzIMk1gfnglZrkU1swN2ld-El9ABKZUexxnY_bl8tnN8bcZ3oqCQzTpLpPrbrcLj02xgDNzSgmhAPrDrZH4sUx2ldzbslgMx-44DKoyXW7eE4g_JrR9xzHGag10a_ISEWk6CIDDRfe06IwLK_SMec0HijzuRRLNMXCRmaoVL0xh2fHLY3ZVtGTmUxMFt8bpST15KG9YltCJzBLI-LOkQZTozhlXh70PVGm18WaoYZYqFTSyBxikhz5_7nUE1LT1lXHPUV-HlB18_ZpWsbshshOkdkiwAmn3t0wIw3mIvB_LDTIF9Pxl4f_0q_SYB1a8uCmU2fnjjoIDNsJcr1yeEA7J3VwQru8-bpNmmZlzvuWh7BZBdASlcY8Q-BQ1lFDEmANtYgLDn5eKrokgxPVqNGJY2l-9YxmnpXaOw=w1204-h903-s-no?authuser=0" width="70%" align="center"/>
-							<center>
 							</center>
+							<p>
+							Obudowa urządzenia została zaprojektowana w programie komputerowym Fusion 360 i wydrukowana technologią drukarek 3D z wykorzystaniem filamentu 
+							PLA i PET-G.
+							</p>
+							<center>
 							<img src="https://lh3.googleusercontent.com/4GA6GNi1i07H0WjS1iZ5eOWmIYFprzEGGbc2paz3YJhUxxtXGBResUQ6DINc1YtLinXiEsuAPn01QJmbOY6jpvneHh4i7j82TldKq3SMADoSpHbSe1SEp4n2pKe3euJRbBIbNUq0J1u0CwTjC_zP2q0nNqrpQnzQ-qVbgi0qI3ZHiyZ6vEukEq1UrOGKPAzaYXj36dQysQi324P83FHkmE6jFKUj1sMYjs_zMl2Z9acADS8YVNPtoFVBRauq0p70np_BarEifL3Rnewxp6Cvlo7f1JSGpa3wTWNjGpmXDX2_xrftvHTh2NZapdMCl45GSS510b1oSIw-ncDMusu5xIYmquRrResuQcWmpKEMCp4_NlmFXYXVNVFzbeeDqRcfVWzKL9EeWkfUL0jw4s4rbW9lEaszcd6ZNc0-5Szbo6qUdr0zJFUzv0UEkKHZtCS_rmxPPIlvj5gU4178kk56cijwoceXnSUlWWFhLXQ64kMdfdnHfzDOYlYtv8AYto-vvtnVrnaQffN5b19Ly3SPAXjkJZaSIPDS5SpXsk1lWv1MWDtr0EPAjXJBQznn1-Hg8qwMf8Oo7P2WGEgSzyRK3ruGt0pCClmQcykhn8_GFEJDzPIjY59xCSpS5knzwkI1kJGRMjUUEu5PHEsPQxOUUdMAE3jXMu1FeynE8c35NWuf6yuvBisi4gm3zu1Ry1Ggg3DXq4Zvt2vOyziR9RR0CvyR34BHyJsKki_G6oNm4onSZuruMzxXlh6SyDtfVE5eiZCswVxYNfXwzRqpiqnJ3HjTdQ0z7LmA23xH8AUJrdBT_RuW6DzKAq0mjoFA8ak4n3PUB4dafupN930Tx3lsUocV2LLNzmXv008-Pzs1kWHQdUYAJ6dLFo6g9lFi1u-4mkRNdtrtobppL7tCVFWAU49Ta1csOq3AdYD65SfDSIKabH5q_ZfvHsZFHk_vtWQgyBQSBThH5perQvkxzw=w307-h306-no?authuser=0" width="40%" align="center"/>
 							</center>
+							<p>
+							Technologia drukowania 3D wykorzystana w do wydrukowania obudowy to FDM. Polega ona na układaniu warstwa po warstwie termoplastycznego materiału 
+							w postaci żyłki, czyli filamentu. Materiał ten jest najpierw podgrzewany w ekstruderze, a następnie układany przez głowicę. Podczas tworzenia 
+							pracy inżynierskiej, zostały wybrane filamenty PLA i PET-G ze względu na łatwość wydruku i możliwość drukowania w komorze otwartej. Materiały 
+							te nie potrzebują wysokiej temperatury wydruku (210ºC dla PLA i 220ºC dla PET-G) oraz posiadają dużą wytrzymałość. Wydruk został wykonany przy 
+							pomocy drukarki Ender 3, która może drukować elementy o maksymalnych wymiarach 440/410/465 mm.
+							</p>
 
 							<p><b>TESTY</b></p>
 							<p>
@@ -208,9 +280,6 @@
 							na podłączeniu napięcia 3V prądu stałego do zacisków elektrod wraz z amperomierzem i sprawdzanie poboru prądu.
 							Urządzenie zostało także przetestowane przy użyciu spektrometru impendancyjnego oraz potencjostatu.
 							</p>
-							
-							LINK DO EASY EDA!!!
-							
 						</div>
 					</div>
 
